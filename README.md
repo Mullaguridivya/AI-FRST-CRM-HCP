@@ -79,31 +79,24 @@ An AI-powered Customer Relationship Management (CRM) module for Healthcare Profe
 
 # LangGraph Agent
 
+The LangGraph agent works as the AI workflow orchestrator for Healthcare Professional interactions. It manages the flow between user requests, backend services, and Groq LLM to generate AI-assisted responses.
 
+## AI Workflow
 
-The LangGraph agent acts as the intelligent orchestrator for Healthcare Professional interactions by processing user input and coordinating AI-assisted responses.
+- Receives user interaction requests from the FastAPI backend
+- Processes the request using LangGraph workflow
+- Uses Groq LLM (llama-3.3-70b-versatile) to generate AI responses
+- Returns the AI-generated response to the frontend
 
+## Interaction Management
 
+Implemented capabilities:
 
-### Proposed LangGraph Tools
+- **Log Interaction** – Stores HCP interaction details such as doctor name, hospital, specialization, product discussed, notes, and outcomes into PostgreSQL.
 
-
-
-- \*\*Log Interaction\*\* – Capture and store HCP interaction details.
-- \*\*Edit Interaction\*\* – Modify previously saved interaction records.
-- \*\*Summarize Interaction\*\* – Generate concise AI summaries of meeting notes.
-- \*\*Recommend Follow-up\*\* – Suggest next actions based on interaction history.
-- \*\*Search Interaction\*\* – Retrieve previous HCP interactions from the database.
-
-
-
----
-
-
+- **Interaction History** – Retrieves previously stored interaction records from PostgreSQL and displays them through the frontend.
 
 # Project Structure
-
-
 
 ```
 
@@ -192,20 +185,14 @@ Displays previously logged HCP interactions stored in PostgreSQL.
 
 !\[Interaction History](screenshots/interaction-history.png)
 
-
-
 ---
 
 ## Swagger API Documentation
 
 
-
 FastAPI automatically generated API documentation.
 
-
-
 !\[Swagger](screenshots/swagger-api.png)
-
 
 ---
 
@@ -263,17 +250,11 @@ columns:
 
 ## Backend
 
-
-
 ```bash
 
 cd backend
 
-
-
 python -m venv venv
-
-
 
 venv\\Scripts\\activate
 
@@ -313,19 +294,13 @@ npm run dev
 
 ```
 
-
-
 Frontend:
-
-
 
 ```
 
 http://localhost:5173
 
 ```
-
-
 
 ---
 
@@ -344,17 +319,12 @@ http://localhost:5173
 ---
 
 
+Future Enhancements:
 
-# Future Enhancements
-
-- Edit interaction functionality
-- Delete interaction functionality
-- AI-powered entity extraction
-- Follow-up reminder system
-- Advanced search and filtering
-
-- Dashboard and analytics
-
+- Edit existing interaction records
+- AI-generated interaction summaries
+- AI-based follow-up recommendations
+- Advanced search and analytics
 ---
 
 
