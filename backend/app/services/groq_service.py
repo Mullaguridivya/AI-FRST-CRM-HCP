@@ -1,0 +1,17 @@
+from langchain_groq import ChatGroq
+
+from app.config import GROQ_API_KEY
+
+
+llm = ChatGroq(
+    groq_api_key=GROQ_API_KEY,
+    model_name="llama-3.3-70b-versatile",
+    temperature=0.3
+)
+
+
+def ask_groq(prompt: str):
+
+    response = llm.invoke(prompt)
+
+    return response.content

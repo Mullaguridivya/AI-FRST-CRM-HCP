@@ -1,0 +1,67 @@
+.chat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.chat-card h2 {
+  color: #1E3A8A;
+  margin-bottom: 20px;
+}
+
+.chat-window {
+  background: #f8fafc;
+  border: 1px solid #dbe4f0;
+  border-radius: 10px;
+  padding: 15px;
+  height: 280px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.ai-message {
+  background: #e0edff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.user-message {
+  background: #d1fae5;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  text-align: right;
+}
+
+.chat-card textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 20px;
+  resize: none;
+  font-size: 15px;
+}
+
+.chat-card textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.chat-card button {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chat-card button:hover {
+  background: #1d4ed8;
+}

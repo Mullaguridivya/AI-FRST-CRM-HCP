@@ -1,0 +1,20 @@
+.header{
+    background:#1E3A8A;
+    color:white;
+    padding:20px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+.subtitle{
+    font-size:15px;
+}

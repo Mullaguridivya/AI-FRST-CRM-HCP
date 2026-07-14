@@ -1,0 +1,53 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  margin-bottom: 25px;
+  color: #1E3A8A;
+}
+
+.interaction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.interaction-form label {
+  font-weight: 600;
+}
+
+.interaction-form input,
+.interaction-form select,
+.interaction-form textarea {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.interaction-form input:focus,
+.interaction-form select:focus,
+.interaction-form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.interaction-form button {
+  margin-top: 15px;
+  background: #2563eb;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.interaction-form button:hover {
+  background: #1d4ed8;
+}
