@@ -1,4 +1,4 @@
-\# AI-First CRM HCP Module
+# AI-First CRM HCP Module
 
 
 
@@ -6,87 +6,78 @@ An AI-powered Customer Relationship Management (CRM) module for Healthcare Profe
 
 
 
-\---
+---
 
 
 
-\# Features
+# Features
 
 
 
-\- Log Healthcare Professional (HCP) interactions
+- Log Healthcare Professional (HCP) interactions
 
-\- AI-powered conversation assistance using Groq LLM
+- AI-powered conversation assistance using Groq LLM
 
-\- LangGraph-based AI workflow
+- LangGraph-based AI workflow
 
-\- Store interaction history in PostgreSQL
+- Store interaction history in PostgreSQL
 
-\- View previously logged interactions
+- View previously logged interactions
 
-\- REST APIs with FastAPI
+- REST APIs with FastAPI
 
-\- Interactive API documentation using Swagger
-
-
-
-\---
+- Interactive API documentation using Swagger
 
 
 
-\# Technology Stack
+---
 
 
 
-\## Frontend
-
-\- React.js
-
-\- Axios
-
-\- CSS
+# Technology Stack
 
 
 
-\## Backend
+## Frontend
 
-\- Python
-
-\- FastAPI
-
-\- SQLAlchemy
+- React.js
+- Axios
+- CSS
 
 
+## Backend
 
-\## Database
-
-\- PostgreSQL
-
-
-
-\## AI Framework
-
-\- LangGraph
+- Python
+- FastAPI
+- SQLAlchemy
 
 
+## Database
 
-\## Large Language Model
-
-\- Groq
-
-\- Model: \*\*llama-3.3-70b-versatile\*\*
+- PostgreSQL
 
 
+## AI Framework
 
-> \*\*Note:\*\* The assignment originally recommended \*\*gemma2-9b-it\*\*, which has been deprecated by Groq. Therefore, \*\*llama-3.3-70b-versatile\*\* was used as the supported replacement.
+- LangGraph
+
+
+## Large Language Model
+
+- Groq
+- Model: \*\*llama-3.3-70b-versatile\*\*
 
 
 
-\---
+\*\*Note:\*\* The assignment originally recommended \*\*gemma2-9b-it\*\*, which has been deprecated by Groq. Therefore, \*\*llama-3.3-70b-versatile\*\* was used as the supported replacement.
 
 
 
-\# LangGraph Agent
+---
+
+
+
+# LangGraph Agent
 
 
 
@@ -94,27 +85,23 @@ The LangGraph agent acts as the intelligent orchestrator for Healthcare Professi
 
 
 
-\### Proposed LangGraph Tools
+### Proposed LangGraph Tools
 
 
 
-\- \*\*Log Interaction\*\* – Capture and store HCP interaction details.
-
-\- \*\*Edit Interaction\*\* – Modify previously saved interaction records.
-
-\- \*\*Summarize Interaction\*\* – Generate concise AI summaries of meeting notes.
-
-\- \*\*Recommend Follow-up\*\* – Suggest next actions based on interaction history.
-
-\- \*\*Search Interaction\*\* – Retrieve previous HCP interactions from the database.
+- \*\*Log Interaction\*\* – Capture and store HCP interaction details.
+- \*\*Edit Interaction\*\* – Modify previously saved interaction records.
+- \*\*Summarize Interaction\*\* – Generate concise AI summaries of meeting notes.
+- \*\*Recommend Follow-up\*\* – Suggest next actions based on interaction history.
+- \*\*Search Interaction\*\* – Retrieve previous HCP interactions from the database.
 
 
 
-\---
+---
 
 
 
-\# Project Structure
+# Project Structure
 
 
 
@@ -170,13 +157,9 @@ AI-FRST-CRM-HCP
 
 
 
-\# Screenshots
+# Screenshots
 
-
-
-\## Home Screen
-
-
+## Home Screen
 
 Displays the Healthcare Professional Interaction Form, AI Conversation Assistant, and Interaction History.
 
@@ -185,13 +168,9 @@ Displays the Healthcare Professional Interaction Form, AI Conversation Assistant
 !\[Home](screenshots/home.png)
 
 
+---
 
-\---
-
-
-
-\## AI Interaction
-
+## AI Interaction
 
 
 AI-generated response using Groq LLM through LangGraph.
@@ -202,12 +181,9 @@ AI-generated response using Groq LLM through LangGraph.
 
 
 
-\---
+---
 
-
-
-\## Interaction History
-
+## Interaction History
 
 
 Displays previously logged HCP interactions stored in PostgreSQL.
@@ -218,11 +194,9 @@ Displays previously logged HCP interactions stored in PostgreSQL.
 
 
 
-\---
+---
 
-
-
-\## Swagger API Documentation
+## Swagger API Documentation
 
 
 
@@ -233,12 +207,11 @@ FastAPI automatically generated API documentation.
 !\[Swagger](screenshots/swagger-api.png)
 
 
-
-\---
-
+---
 
 
-\# REST API Endpoints
+
+# REST API Endpoints
 
 
 
@@ -258,61 +231,37 @@ FastAPI automatically generated API documentation.
 
 
 
-\---
+---
 
-
-
-\# Database
+# Database
 
 
 
 Database: \*\*PostgreSQL\*\*
 
-
-
 Table:
 
+- interactions
+
+columns:
+
+- id
+- doctor\_name
+- hospital
+- specialization
+- meeting\_date
+- product\_discussed
+- outcome
+- follow\_up\_date
+- notes
+- ai\_response
 
 
-\- interactions
+---
 
+# Running the Project
 
-
-Columns:
-
-
-
-\- id
-
-\- doctor\_name
-
-\- hospital
-
-\- specialization
-
-\- meeting\_date
-
-\- product\_discussed
-
-\- outcome
-
-\- follow\_up\_date
-
-\- notes
-
-\- ai\_response
-
-
-
-\---
-
-
-
-\# Running the Project
-
-
-
-\## Backend
+## Backend
 
 
 
@@ -328,21 +277,13 @@ python -m venv venv
 
 venv\\Scripts\\activate
 
-
-
 pip install -r requirements.txt
-
-
 
 uvicorn app.main:app --reload
 
 ```
 
-
-
 Backend:
-
-
 
 ```
 
@@ -350,11 +291,7 @@ http://127.0.0.1:8000
 
 ```
 
-
-
 Swagger:
-
-
 
 ```
 
@@ -362,25 +299,15 @@ http://127.0.0.1:8000/docs
 
 ```
 
+---
 
-
-\---
-
-
-
-\## Frontend
-
-
+## Frontend
 
 ```bash
 
 cd frontend
 
-
-
 npm install
-
-
 
 npm run dev
 
@@ -400,71 +327,43 @@ http://localhost:5173
 
 
 
-\---
+---
+
+# Assignment Deliverables Covered
+
+- React-based user interface
+- FastAPI backend
+- PostgreSQL database integration
+- LangGraph integration
+- Groq LLM integration
+- AI-assisted interaction logging
+- Interaction history
+- REST APIs
+- GitHub repository with documentation
+
+---
 
 
 
-\# Assignment Deliverables Covered
+# Future Enhancements
+
+- Edit interaction functionality
+- Delete interaction functionality
+- AI-powered entity extraction
+- Follow-up reminder system
+- Advanced search and filtering
+
+- Dashboard and analytics
+
+---
 
 
 
-\- React-based user interface
-
-\- FastAPI backend
-
-\- PostgreSQL database integration
-
-\- LangGraph integration
-
-\- Groq LLM integration
-
-\- AI-assisted interaction logging
-
-\- Interaction history
-
-\- REST APIs
-
-\- GitHub repository with documentation
-
-
-
-\---
-
-
-
-\# Future Enhancements
-
-
-
-\- Edit interaction functionality
-
-\- Delete interaction functionality
-
-\- AI-powered entity extraction
-
-\- Follow-up reminder system
-
-\- Advanced search and filtering
-
-\- Dashboard and analytics
-
-
-
-\---
-
-
-
-\# Author
-
-
+# Author
 
 \*\*Mullaguri Divya\*\*
 
-
-
 B.Tech – Electronics and Communication Engineering
-
-
 
 AI-First CRM HCP Module Assignment
 
