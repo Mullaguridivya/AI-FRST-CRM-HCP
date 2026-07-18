@@ -329,6 +329,9 @@ Future Enhancements:
 
 
 
+## Note:- 
+Take-home technical assessment completed as part of the interview process for a Full Stack Developer (AI Applications) role at AIVOA AI — Python + React.
+
 # Author
 
 \*\*Mullaguri Divya\*\*
@@ -341,5 +344,5 @@ AI-First CRM HCP Module Assignment
 
 
 
-This is README.md you have given me
+
 
